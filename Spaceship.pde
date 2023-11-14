@@ -1,5 +1,6 @@
 class Spaceship extends Floater  
 {   
+  double myXSpeed;
     public Spaceship(){
       corners = 10;
       xCorners = new int[]{14, 4, 4, -12, -6, -18, -6, -12, 4, 4};
@@ -26,6 +27,7 @@ class Spaceship extends Floater
       yCorners[9] = 6;
       */
     }
-      public void setXSpeed(double X){
+      public void setXSpeed(double x){
         myXSpeed = x;
+}
 }
