@@ -30,4 +30,10 @@ public void keyPressed(){
   if(key == ' '){
     Chan.restart();
   }
+  if(key == 's' || key == 'S') {
+     Chan.accelerate(-1);
+  }
+  if(key == 'h' || key == 'H'){
+    Chan.hyperspace();
+  }
 }
