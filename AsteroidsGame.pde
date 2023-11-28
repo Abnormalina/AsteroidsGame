@@ -23,7 +23,7 @@ for (int i = 0; i < jacky.size(); i++) {
     jacky.get(i).move();
     jacky.get(i).show();
     float d = dist(Chan.getX(), Chan.getY(), jacky.get(i).getCenterX(), jacky.get(i).getCenterY());
-    if (d<10){
+    if (d<20){
       jacky.remove(i);
     }
 }
