@@ -1,11 +1,15 @@
 Spaceship Chan = new Spaceship();
 Star[] sky = new Star[200];
+ArrayList <Asteroid> jacky = new ArrayList <Asteroid>();
 public void setup() 
 {
  size(500, 500);
  for(int i = 0; i < sky.length; i++){
    sky[i] = new Star();
  }
+ for(int i = 0; i < 10; i++){
+   jacky.add(new Asteroid());
+}
 }
 public void draw() 
 {
@@ -15,6 +19,16 @@ public void draw()
  }
     Chan.show();
    Chan.move();
+for (int i = 0; i < jacky.size(); i++) {
+    jacky.get(i).move();
+    jacky.get(i).show();
+    float d = dist(Chan.getX(), Chan.getY(), jacky.get(i).getCenterX(), jacky.get(i).getCenterY());
+    if (d<10){
+      jacky.remove(i);
+    }
+}
+
+
 }
 
 public void keyPressed(){
