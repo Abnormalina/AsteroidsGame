@@ -67,7 +67,7 @@ public void keyPressed(){
   if(key == 'h' || key == 'H'){
     Chan.hyperspace();
   }
-  if(key == ' '){
+  if(key == 'b' || key == 'B'){
   Crabtree.add(new Bullet(Chan));
   }
   if(Chan.myXspeed>10){
