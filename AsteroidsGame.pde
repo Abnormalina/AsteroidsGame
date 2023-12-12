@@ -29,21 +29,24 @@ for (int i = 0; i < jacky.size(); i++) {
     }
 }
 
-    for(int q=0; q<Crabtree.size(); q++){
+  for(int q=0; q<Crabtree.size(); q++){
     Crabtree.get(q).move();
     Crabtree.get(q).show();
-    float di = dist((float)Crabtree.get(q).myCenterX, (float)Crabtree.get(q).myCenterY, (float)jacky.get(q).myCenterX, (float)jacky.get(q).myCenterY);
-    if(di<10){
-   Crabtree.remove(q);
-   jacky.remove(q);
+  for(int i = 0; i < jacky.size(); i++) {
+  float di = dist((float)Crabtree.get(q).myCenterX, (float)Crabtree.get(q).myCenterY, (float)jacky.get(i).myCenterX, (float)jacky.get(i).myCenterY);
+  if(di<10){
+  Crabtree.remove(q);
+jacky.remove(i);
 
+    }
+}
   }  
 
 
 }
 
 
-}
+
 
 public void keyPressed(){
   if(keyPressed){
@@ -64,7 +67,7 @@ public void keyPressed(){
   if(key == 'h' || key == 'H'){
     Chan.hyperspace();
   }
-  if(key == ' ' && Crabtree.size() <= 10){
+  if(key == ' '){
   Crabtree.add(new Bullet(Chan));
   }
   if(Chan.myXspeed>10){
