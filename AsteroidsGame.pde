@@ -37,7 +37,7 @@ for (int i = 0; i < jacky.size(); i++) {
   if(di<10){
   Crabtree.remove(q);
 jacky.remove(i);
-
+break;
     }
 }
   }  
